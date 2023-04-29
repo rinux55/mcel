@@ -30,10 +30,15 @@ async function sendMessage() {
   loading.value = true
   const prompt = startPrompt + message.value
   
-  const response = await chatCompletion(prompt)  
-  data.value = response
-  loading.value = false
-  message.value = ''
+  try {
+    const response = await chatCompletion(prompt)  
+    data.value = response
+    message.value = ''
+  } catch (e) {
+    data.value = 'MCEL servers unavailable at the moment. Please try again.'
+  } finally {
+    loading.value = false
+  }
 }
 
 function reset() {
