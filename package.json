@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "mcel",
   "private": true,
   "scripts": {
     "build": "nuxt build",
