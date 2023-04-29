@@ -21,7 +21,7 @@
             <div class="flex">
                 <span class="m-auto pr-2">> </span>
                 <input
-                    v-model="prompt"
+                    v-model="userPrompt"
                     autofocus
                     type="text"
                     class="flex-1 border-b border-pink-200 text-pink-200 py-2 bg-transparent placeholder:text-pink-200 focus:outline-none"
@@ -54,15 +54,15 @@ const props = defineProps<{
 const { chatCompletion } = useChatgpt()
   
 const mcelResponse = ref('')
-const prompt = ref('')
+const userPrompt = ref('')
 const loading = ref(false)
   
 async function sendMessage() {
     loading.value = true 
     
     try {
-        mcelResponse.value = await chatCompletion(props.gptPrompt + prompt.value)  
-        prompt.value = ''
+        mcelResponse.value = await chatCompletion(props.gptPrompt + userPrompt.value)  
+        userPrompt.value = ''
     } catch (e) {
         mcelResponse.value = props.errorText
     } finally {
