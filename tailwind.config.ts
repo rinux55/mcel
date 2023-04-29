@@ -1,11 +1,13 @@
 import type { Config } from 'tailwindcss'
-import defaultTheme from 'tailwindcss/defaultTheme'
 export default <Partial<Config>>{
     theme: {
-    extend: {
-      fontFamily: {
-        mono: ['VT323', 'monospace']
-      }
+        extend: {
+            fontFamily: {
+                mono: ['VT323', 'monospace']
+            },
+            colors: {
+                black: '#161519'
+            }
+        }
     }
-  }
 }
