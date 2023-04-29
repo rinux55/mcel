@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Mushroom Cultivation and Extraction Laboratory Assistant (MCEL-a)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This app acts as a personal AI assistant which can tell you everything about cultivating mushrooms. It queries OpenAi's GPT-3-turbo model.
 
 ## Setup
 
@@ -16,6 +16,10 @@ npm install
 # pnpm
 pnpm install
 ```
+
+## Configuration
+
+Copy `.env.example` to `.env` and configure `OPENAI_API_KEY` to have your OpenAI API key.
 
 ## Development Server
 
